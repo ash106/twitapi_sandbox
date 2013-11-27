@@ -16,4 +16,10 @@ $ ->
 
   google.maps.event.addListener map, "click", (e) ->
     moveMarker e.latLng
-    $('#map_results').html('<p>Lat: ' + e.latLng.lat() + '</p><p>Lng: ' + e.latLng.lng() + '</p>')
+    $('#map_results').html '<p>Lat: ' + e.latLng.lat() + '</p><p>Lng: ' + e.latLng.lng() + '</p><p>NE: ' + map.getBounds().getNorthEast().toString() + '</p><p>SW: ' + map.getBounds().getSouthWest().toString() + '</p>'
+    # $.ajax
+    #   type: "POST"
+    #   url: url
+    #   data: data
+    #   success: success
+    #   dataType: dataType
